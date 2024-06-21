@@ -13,9 +13,12 @@ function App() {
     setQuery("");
 
     try {
-      const response = await axios.post(process.env.BASE_URL, {
-        query,
-      });
+      const response = await axios.post(
+        "https://c2a7-110-235-217-80.ngrok-free.app/chat",
+        {
+          query,
+        }
+      );
 
       const agentResponse = response.data.response;
 
